@@ -2,11 +2,16 @@ package test;
 
 public class Test {
     public static void main(String[] args) {
-        double a = 1.000001;
-        double b = 1.000002;
-        if ( Math.abs(b - a) < 0.0001 )
-            System.out.println("Числа равны");
-        else
-            System.out.println("Числа не равны");
+        int i = 1;
+        while (i <= 20) {
+            if ((i % 7) == 0) {
+                i++;
+                continue;
+            }
+            System.out.println(i);
+            i++;
+        }
     }
 }
+
+
