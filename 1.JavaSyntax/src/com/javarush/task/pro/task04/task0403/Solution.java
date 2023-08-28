@@ -9,15 +9,21 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number1 = scanner.nextInt();
-        int number2 = scanner.nextInt();
-        boolean word = false;
-        int result = number1 + number2;
-        while (!word) {
-            System.out.println(result);
-            String s = scanner.nextLine();
-            word = s.equals("ENTER") ;
+        int summ = 0;
+        while ( true ) 
+        {
+            if (scanner.hasNextInt()) {
+                int number = scanner.nextInt();
+            summ = summ + number;
+            
+            } else if (scanner.hasNextLine()) {
+                String string = scanner.nextLine();
+                if (string.equals("ENTER")) {
+                    break;
+                }
+            }
+        
         }
-
+System.out.println(summ);
     }
 }
