@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int[] array = new int[10];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = scanner.nextInt();
-        }
-        int min = array [0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
+        int[][] twoD = new int[4][5];
+        int k=0;
+        for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 5; j++) {
+                twoD[i][j] = k;
+                k++;
             }
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++)
+                System.out.print(twoD[i][j] + " ");
+            System.out.println();
         }
-        System.out.println(min);
+
     }
 }
+
